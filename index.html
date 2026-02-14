@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>50% Discount Home — Gas Delivery Thika & Garissa Rd</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS for map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <svg class="brand-logo" viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M32 12 L40 28 L32 24 L24 28 Z" fill="currentColor"/>
+      </svg>
+      <div>
+        <div class="brand-name">Zabibu Gas Delivary</div>
+        <div class="brand-tag">Fast • Safe • Affordable</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="#order" class="btn-outline">Order</a>
+      <a href="#how" class="nav-link">How to Order</a>
+      <a href="#community" class="nav-link">Our Community</a>
+      <a href="#contact" class="nav-link">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero container">
+  <div class="hero-left">
+    <h1>Gas delivered to your door in <span class="accent">Jomoko – Thika & Garissa Rd</span></h1>
+    <p class="lead">
+      <span class="accent">Enjoy 50% </span>off your first order with our safe and reliable gas delivery service.
+      We provide fast delivery to homes and businesses around <span class="accent">Ananas Mall, Jomoko</span>,
+      and throughout <span class="accent">Garissa Road.</span>
+    </p>
+
+    <div class="hero-cta">
+      <a href="#order" class="btn-primary">Quick Order</a>
+      <a href="#how" class="btn-ghost">Learn How</a>
+    </div>
+
+    <ul class="benefits">
+      <li>Pin your location</li>
+      <li>Fast delivery </li>
+      <li>24/7 Customer support</li>
+    </ul>
+  </div>
+
+  <div class="hero-right">
+    <div class="card order-preview">
+      <div class="card-header">
+        <strong>Quick Order</strong>
+        <small>Estimated delivery: Today</small>
+      </div>
+
+      <!-- =======================
+           ORDER FORM
+      ======================= -->
+      <form id="orderForm" class="order-form">
+
+        <label>
+          Full name
+          <input type="text" name="name" placeholder="Enter your name" required>
+        </label>
+
+        <label>
+          Delivery address
+          <input type="text" name="address" id="address" placeholder="Type your address or pin on map" required>
+        </label>
+
+        <div class="pin-location">
+          <button type="button" class="btn-pin" id="pinLocation">📍 Pin My Location</button>
+          <div id="map" class="map-frame"></div>
+        </div>
+
+        <!-- Hidden GPS coordinates -->
+        <input type="hidden" name="lat">
+        <input type="hidden" name="lng">
+
+        <div class="form-row">
+          <label>
+            Cylinder size
+            <select name="size">
+              <option value="6kg">6 kg</option>
+              <option value="12.5kg" selected>12.5 kg</option>
+              <option value="15kg">15 kg</option>
+            </select>
+          </label>
+
+          <label>
+            Quantity
+            <input type="number" name="qty" min="1" value="1">
+          </label>
+        </div>
+
+        <label>
+          Phone
+          <input type="tel" name="phone" placeholder="+254 7xx xxx xxx" required>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary full">Place order — 50% off</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="container how">
+  <h2>How it works</h2>
+  <div class="grid-3">
+    <div class="feature">
+      <div class="feature-icon">📱</div>
+      <h3>Order Online</h3>
+      <p>Enter your details, pin your location and confirm order.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🚛</div>
+      <h3>We Deliver</h3>
+      <p>
+        Our riders deliver safely across
+        <span class="accent">Garissa Road</span>,
+        TIBS, Ananas Mall areas, Makongeni (Phase 4),
+        Kisii, Kiganjo, Flame Tree, Landless, Muguga.
+      </p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">💳</div>
+      <h3>Pay Easily</h3>
+      <p>Pay by M-Pesa, cash, or card upon delivery.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section id="community" class="container community">
+  <h2>Join Our Local Community</h2>
+  <p class="community-text">
+    Connect with other customers around Jomoko and Thika, share delivery feedback,
+    and get real-time promo updates.
+  </p>
+  <a href="https://chat.whatsapp.com/Cw1VfGfrsfEAq1D22v8ZXF" class="btn-community">
+    💬 Join Our WhatsApp Group
+  </a>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="container contact">
+  <h2>Contact & Support</h2>
+  <div class="contact-grid">
+    <div>
+      <p><strong>Phone</strong><br> +254 734 272 801</p>
+      <p><strong>Email</strong><br> support@50discount.co.ke</p>
+    </div>
+    <div>
+      <p><strong>Working hours</strong><br> 24 hrs (Mon–Sun)</p>
+      <p><strong>Service Area</strong><br> Jomoko • TIBS • Thika • Garissa Road</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <small>© 2026 50% Discount</small>
+    <div class="footer-links">
+      <a href="#how">How it works</a>
+      <a href="#community">Community</a>
+      <a href="#contact">Support</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<!-- Main JS -->
+<script src="app.js"></script>
+</body>
+</html>
